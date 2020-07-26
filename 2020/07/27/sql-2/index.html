@@ -20,17 +20,22 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="WM Blog">
-<meta property="og:url" content="https://wangmianhelo.github.io/wangmian/archives/index.html">
+    <meta name="description" content="们已经可以从一个表中取出特定列的数据了，但是如果一个表有几百万条数据，那么取出全部的数据将是非常效率低甚至不可能。为了过滤出特点需要返回的数据，我们需要在查询中使用 WHERE 分句，它会应用于每一行通过检查特定列的值来决定是否将此行作为结果返回。 12345SELECT column, another_column, …FROM mytable;WHERE condition    AND&#x2F;OR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL语言学习1-在查询中加入约束条件（Constraints)">
+<meta property="og:url" content="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-2/index.html">
 <meta property="og:site_name" content="WM Blog">
+<meta property="og:description" content="们已经可以从一个表中取出特定列的数据了，但是如果一个表有几百万条数据，那么取出全部的数据将是非常效率低甚至不可能。为了过滤出特点需要返回的数据，我们需要在查询中使用 WHERE 分句，它会应用于每一行通过检查特定列的值来决定是否将此行作为结果返回。 12345SELECT column, another_column, …FROM mytable;WHERE condition    AND&#x2F;OR">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-26T16:46:10.270Z">
+<meta property="article:modified_time" content="2020-07-26T16:47:32.555Z">
 <meta property="article:author" content="Mian Wang">
+<meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>WM Blog</title>
+    <title>SQL语言学习1-在查询中加入约束条件（Constraints) · WM Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +216,23 @@
 <meta name="generator" content="Hexo 4.2.1"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/wangmian/" >WM Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">SQL语言学习1-在查询中加入约束条件（Constraints)</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/wangmian/>WM Blog</a>
 </header>
@@ -228,24 +244,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/wangmian/)"></div>
+    <div class="site-intro-img" style="background-image: url(/wangmian/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            SQL语言学习1-在查询中加入约束条件（Constraints)
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">291</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/07/27</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,72 +412,90 @@
 </script>        
         <img class="loading" src="/wangmian/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/wangmian/2020/07/27/sql-2/" >
-            
-                <span>SQL语言学习1-在查询中加入约束条件（Constraints)</span>
-        </a>
-        <div class="abstract-content">
-            们已经可以从一个表中取出特定列的数据了，但是如果一个表有几百万条数据，那么取出全部的数据将是非常效率低甚至不可能。为了过滤出特点需要返回的数据，我们需要在查询中使用 WHERE 分句，它会应用于每一行通过检查特定列的值来决定是否将此行作为结果返回。
-12345SELECT column, another_column, …FROM mytable;WHERE condition    AND/OR another_condition    AND/OR …;
-可以使用 AND 或者 OR 来组合子句（例如 id &gt; 2 AND num &lt; 5)。下表列出了一些有用的运算符可以...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>们已经可以从一个表中取出特定列的数据了，但是如果一个表有几百万条数据，那么取出全部的数据将是非常效率低甚至不可能。<br>为了过滤出特点需要返回的数据，我们需要在查询中使用 <strong>WHERE</strong> 分句，它会应用于每一行通过检查特定列的值来决定是否将此行作为结果返回。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT column, another_column, …</span><br><span class="line">FROM mytable;</span><br><span class="line">WHERE condition</span><br><span class="line">    AND/OR another_condition</span><br><span class="line">    AND/OR …;</span><br></pre></td></tr></table></figure>
+<p>可以使用 <strong>AND</strong> 或者 <strong>OR</strong> 来组合子句（例如 id &gt; 2 <strong>AND</strong> num &lt; 5)。<br>下表列出了一些有用的运算符可以用在一些用数字表示的数据中。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>条件</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>=, !=, &lt; &lt;=, &gt;, &gt;=</td>
+<td>标准运算符</td>
+<td>col_name != 1</td>
+</tr>
+<tr>
+<td>BETWEEN … AND …</td>
+<td>数字在这两个值之间（包含边界）</td>
+<td>col_name BETWEEN 1.0 AND 10.5</td>
+</tr>
+<tr>
+<td>NOT BETWEEN … AND …</td>
+<td>数字不在这两个值之间（不包含边界）</td>
+<td>col_name NOT BETWEEN 1 AND 10</td>
+</tr>
+<tr>
+<td>IN (…)</td>
+<td>数字存在列表中</td>
+<td>col_name IN (2, 4, 6)</td>
+</tr>
+<tr>
+<td>NOT IN (…)</td>
+<td>Number does not exist in a list</td>
+<td>col_name NOT IN (1, 3, 5)</td>
+</tr>
+</tbody></table>
+<p>现在我们就可以通过增加限制来去掉我们不想取回的行了。</p>
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/wangmian/2020/07/27/sql-1/" >
-            
-                <span>SQL语言学习1-SELECT查询</span>
-        </a>
-        <div class="abstract-content">
-            在关系型数据库中，数据都是存在表格（table)中，表格的每一行代表一条记录（record),而每一列(column)为记录的单个属性（property)。为了从数据库取到我们想要的内容，我们需要写SELECT查询语句（query)。查询语句声明了我们想要什么数据，在哪里找以及在返回之前需要作何处理。最基本的查询就是选择一个数据库表中的一到多列数据，查询的结果返回选择列的所有行记录，其中的每一行数据也可以成为一个实例（instance)。
-12SELECT column, another_column, …FROM mytable;
-如果我们想要查询这个表中的所有的列，我们可以使用 * ...
+        <div class="license-wrapper">
+            <p>Author：<a href="https://wangmianhelo.github.io/wangmian">Mian Wang</a>
+            <p>原文链接：<a href="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-2/">https://wangmianhelo.github.io/wangmian/2020/07/27/sql-2/</a>
+            <p>发表日期：<a href="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-2/">July 27th 2020, 2:46:10 am</a>
+            <p>更新日期：<a href="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-2/">July 27th 2020, 2:47:32 am</a>
+            <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/wangmian/2020/07/27/sql-1/" title= "SQL语言学习1-SELECT查询">
+                    <div class="prevTitle">SQL语言学习1-SELECT查询</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -496,6 +580,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -623,6 +725,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/wangmian/scripts/share.js" async></script>    
      
     </body>
 </html>
