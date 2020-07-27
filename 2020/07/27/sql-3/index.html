@@ -20,22 +20,22 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="现在我们已经可以从一个表中取出特定列的数据了，但是如果一个表有几百万条数据，那么取出全部的数据将是非常效率低甚至不可能。为了过滤出特点需要返回的数据，我们需要在查询中使用 WHERE 分句，它会应用于每一行通过检查特定列的值来决定是否将此行作为结果返回。 12345SELECT column, another_column, …FROM mytable;WHERE condition    AND">
+    <meta name="description" content="上一节列出了一些数字操作符，SQL还支持一些对字符串的操作符，下表包含了一些常用的与文本数据相关的操作符：    运算符 条件 举例    &#x3D; 区分大小写的字符串比较 col_name &#x3D; “abc”   !&#x3D; or &lt;&gt; 区分大小写的字符串不等比较 col_name !&#x3D; “abcd”   LIKE 不区分大小写的字符串比较 col_name LIKE “ABC”   NOT LIK">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL2-在查询中加入约束条件（Constraints)">
-<meta property="og:url" content="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-2/index.html">
+<meta property="og:title" content="SQL3-在查询中加入约束条件-part2（Constraints)">
+<meta property="og:url" content="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-3/index.html">
 <meta property="og:site_name" content="WM Blog">
-<meta property="og:description" content="现在我们已经可以从一个表中取出特定列的数据了，但是如果一个表有几百万条数据，那么取出全部的数据将是非常效率低甚至不可能。为了过滤出特点需要返回的数据，我们需要在查询中使用 WHERE 分句，它会应用于每一行通过检查特定列的值来决定是否将此行作为结果返回。 12345SELECT column, another_column, …FROM mytable;WHERE condition    AND">
+<meta property="og:description" content="上一节列出了一些数字操作符，SQL还支持一些对字符串的操作符，下表包含了一些常用的与文本数据相关的操作符：    运算符 条件 举例    &#x3D; 区分大小写的字符串比较 col_name &#x3D; “abc”   !&#x3D; or &lt;&gt; 区分大小写的字符串不等比较 col_name !&#x3D; “abcd”   LIKE 不区分大小写的字符串比较 col_name LIKE “ABC”   NOT LIK">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-26T16:46:10.270Z">
-<meta property="article:modified_time" content="2020-07-26T16:55:15.032Z">
+<meta property="article:published_time" content="2020-07-27T10:09:38.877Z">
+<meta property="article:modified_time" content="2020-07-27T10:29:20.510Z">
 <meta property="article:author" content="Mian Wang">
 <meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>SQL2-在查询中加入约束条件（Constraints) · WM Blog</title>
+    <title>SQL3-在查询中加入约束条件-part2（Constraints) · WM Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -230,7 +230,7 @@
                 <a href="/wangmian/" >WM Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">SQL2-在查询中加入约束条件（Constraints)</a>
+                <a href="#" class="post-name">SQL3-在查询中加入约束条件-part2（Constraints)</a>
             </div>
     </div>
     
@@ -260,7 +260,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            SQL2-在查询中加入约束条件（Constraints)
+            SQL3-在查询中加入约束条件-part2（Constraints)
             <!-- 404 -->
             
         </h1>
@@ -285,7 +285,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">294</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">350</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -414,9 +414,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>现在我们已经可以从一个表中取出特定列的数据了，但是如果一个表有几百万条数据，那么取出全部的数据将是非常效率低甚至不可能。<br>为了过滤出特点需要返回的数据，我们需要在查询中使用 <strong>WHERE</strong> 分句，它会应用于每一行通过检查特定列的值来决定是否将此行作为结果返回。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT column, another_column, …</span><br><span class="line">FROM mytable;</span><br><span class="line">WHERE condition</span><br><span class="line">    AND/OR another_condition</span><br><span class="line">    AND/OR …;</span><br></pre></td></tr></table></figure>
-<p>可以使用 <strong>AND</strong> 或者 <strong>OR</strong> 来组合子句（例如 id &gt; 2 <strong>AND</strong> num &lt; 5)。<br>下表列出了一些有用的运算符可以用在一些用数字表示的数据中。</p>
+        <p>上一节列出了一些数字操作符，SQL还支持一些对字符串的操作符，下表包含了一些常用的与文本数据相关的操作符：</p>
 <table>
 <thead>
 <tr>
@@ -426,41 +424,57 @@ height:50vh;
 </tr>
 </thead>
 <tbody><tr>
-<td>=, !=, &lt; &lt;=, &gt;, &gt;=</td>
-<td>标准运算符</td>
-<td>col_name != 1</td>
+<td>=</td>
+<td>区分大小写的字符串比较</td>
+<td>col_name = “abc”</td>
 </tr>
 <tr>
-<td>BETWEEN … AND …</td>
-<td>数字在这两个值之间（包含边界）</td>
-<td>col_name BETWEEN 1.0 AND 10.5</td>
+<td>!= or &lt;&gt;</td>
+<td>区分大小写的字符串不等比较</td>
+<td>col_name != “abcd”</td>
 </tr>
 <tr>
-<td>NOT BETWEEN … AND …</td>
-<td>数字不在这两个值之间（不包含边界）</td>
-<td>col_name NOT BETWEEN 1 AND 10</td>
+<td>LIKE</td>
+<td>不区分大小写的字符串比较</td>
+<td>col_name LIKE “ABC”</td>
 </tr>
 <tr>
-<td>IN (…)</td>
-<td>数字存在列表中</td>
-<td>col_name IN (2, 4, 6)</td>
+<td>NOT LIKE</td>
+<td>不区分大小写的字符串不等比较</td>
+<td>col_name NOT LIKE “ABCD”</td>
+</tr>
+<tr>
+<td>%</td>
+<td>用在字符串的任何地方来匹配零或者多个字符的串（只能和LIKE或者NOT LIKE 一起使用）</td>
+<td>col_name LIKE “%AT%” (matches “AT”, “ATTIC”, “CAT” or even “BATS”)</td>
+</tr>
+<tr>
+<td>-</td>
+<td>在字符串的任何地方使用来匹配单个字符（只能和LIKE或者NOT LIKE 使用</td>
+<td>col_name LIKE “AN_” (matches “AND”, but not “AN”)</td>
+</tr>
+<tr>
+<td>IN(…)</td>
+<td>字符串在列表中出现</td>
+<td>col_name IN (“A”, “B”, “C”)</td>
 </tr>
 <tr>
 <td>NOT IN (…)</td>
-<td>Number does not exist in a list</td>
-<td>col_name NOT IN (1, 3, 5)</td>
+<td>字符串没有在列表中出现</td>
+<td>col_name NOT IN (“D”, “E”, “F”)</td>
 </tr>
 </tbody></table>
-<p>现在我们就可以通过增加限制来去掉我们不想取回的行了。</p>
+<p>注意：所有的字符串必须使用引号这样才能和SQL里面的关键字区分开。</p>
+<p>我们需要注意的是尽管这些操作符可以非常高效的帮我们进行查找，全局文本搜索最好使用专门的库比如 <strong>Apache Lucene</strong> 或者 <strong>Sphinx</strong>。这些被设计专门用来做文本搜索，因此他们更为高效并且还提供了更为丰富的查询方法。</p>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>Author：<a href="https://wangmianhelo.github.io/wangmian">Mian Wang</a>
-            <p>原文链接：<a href="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-2/">https://wangmianhelo.github.io/wangmian/2020/07/27/sql-2/</a>
-            <p>发表日期：<a href="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-2/">July 27th 2020, 2:46:10 am</a>
-            <p>更新日期：<a href="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-2/">July 27th 2020, 2:55:15 am</a>
+            <p>原文链接：<a href="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-3/">https://wangmianhelo.github.io/wangmian/2020/07/27/sql-3/</a>
+            <p>发表日期：<a href="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-3/">July 27th 2020, 8:09:38 pm</a>
+            <p>更新日期：<a href="https://wangmianhelo.github.io/wangmian/2020/07/27/sql-3/">July 27th 2020, 8:29:20 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -468,17 +482,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/wangmian/2020/07/27/sql-3/" title= "SQL3-在查询中加入约束条件-part2（Constraints)">
-                    <div class="nextTitle">SQL3-在查询中加入约束条件-part2（Constraints)</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/wangmian/2020/07/27/sql-1/" title= "SQL1-SELECT查询">
-                    <div class="prevTitle">SQL1-SELECT查询</div>
+                <a href= "/wangmian/2020/07/27/sql-2/" title= "SQL2-在查询中加入约束条件（Constraints)">
+                    <div class="prevTitle">SQL2-在查询中加入约束条件（Constraints)</div>
                 </a>
             
         </li>
