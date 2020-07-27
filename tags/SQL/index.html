@@ -386,6 +386,67 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/wangmian/2020/07/27/sql-3/" >
+            
+                <span>SQL3-在查询中加入约束条件-part2（Constraints)</span>
+        </a>
+        <div class="abstract-content">
+            上一节列出了一些数字操作符，SQL还支持一些对字符串的操作符，下表包含了一些常用的与文本数据相关的操作符：
+
+
+
+运算符
+条件
+举例
+
+
+
+=
+区分大小写的字符串比较
+col_name = “abc”
+
+
+!= or &lt;&gt;
+区分大小写的字符串不等比较
+col_name != “abcd”
+
+
+LIKE
+不区分大小写的字符串比较
+col_name LIKE “ABC”
+
+
+NOT LIKE
+不区分大小写的字符串不等比较
+col_name NOT LIKE “ABCD”
+
+
+%
+用在字符串的任何地方来匹配零或者多个字符的串（只能和LIKE或者NOT LIKE 一起使用）
+col_...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/27</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/wangmian/2020/07/27/sql-2/" >
             
                 <span>SQL2-在查询中加入约束条件（Constraints)</span>
@@ -425,67 +486,6 @@
             在关系型数据库中，数据都是存在表格（table)中，表格的每一行代表一条记录（record),而每一列(column)为记录的单个属性（property)。为了从数据库取到我们想要的内容，我们需要写SELECT查询语句（query)。查询语句声明了我们想要什么数据，在哪里找以及在返回之前需要作何处理。最基本的查询就是选择一个数据库表中的一到多列数据，查询的结果返回选择列的所有行记录，其中的每一行数据也可以成为一个实例（instance)。
 12SELECT column, another_column, …FROM mytable;
 如果我们想要查询这个表中的所有的列，我们可以使用 * ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/wangmian/2020/07/27/sql-3/" >
-            
-                <span>SQL3-在查询中加入约束条件-part2（Constraints)</span>
-        </a>
-        <div class="abstract-content">
-            上一节列出了一些数字操作符，SQL还支持一些对字符串的操作符，下表包含了一些常用的与文本数据相关的操作符：
-
-
-
-运算符
-条件
-举例
-
-
-
-=
-区分大小写的字符串比较
-col_name = “abc”
-
-
-!= or &lt;&gt;
-区分大小写的字符串不等比较
-col_name != “abcd”
-
-
-LIKE
-不区分大小写的字符串比较
-col_name LIKE “ABC”
-
-
-NOT LIKE
-不区分大小写的字符串不等比较
-col_name NOT LIKE “ABCD”
-
-
-%
-用在字符串的任何地方来匹配零或者多个字符的串（只能和LIKE或者NOT LIKE 一起使用）
-col_...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -634,6 +634,10 @@ col_...
     
     
     
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 4
@@ -657,17 +661,17 @@ col_...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">07/27</span><a class="archive-post-title" href= "/wangmian/2020/07/27/sql-3/" >SQL3-在查询中加入约束条件-part2（Constraints)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">07/27</span><a class="archive-post-title" href= "/wangmian/2020/07/27/sql-2/" >SQL2-在查询中加入约束条件（Constraints)</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/27</span><a class="archive-post-title" href= "/wangmian/2020/07/27/sql-1/" >SQL1-SELECT查询</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/27</span><a class="archive-post-title" href= "/wangmian/2020/07/27/sql-3/" >SQL3-在查询中加入约束条件-part2（Constraints)</a>
         </li>
     
     </div>
