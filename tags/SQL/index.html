@@ -354,6 +354,67 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/wangmian/2020/07/28/SQL8/" >
+            
+                <span>SQL8：在查询中加入表达式</span>
+        </a>
+        <div class="abstract-content">
+            除了直接通过SQL来查找原始的列数据，我们还可以在一个查询中通过使用表达式来写出逻辑更为复杂的查询语句。可以使用数学表达式和字符串函数来对要查询的值进行改变当我们在查询的时候，下面的例子展示了这种方法：
+123SELECT particle_speed / 2.0 AS half_particle_speedFROM physics_dataWHERE ABS(particle_position) * 10.0 &gt; 500;
+每一种数据库都有自己支持的一系列数学的，字符串以及时间函数，这些需要在文档中寻找。使用表达式可以节省时间并且对结果数据进行额外的处理，但是会让查询变得更加难以...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/28</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/wangmian/2020/07/28/SQL7/" >
+            
+                <span>SQL7：关于NULLs</span>
+        </a>
+        <div class="abstract-content">
+            减少出现 NULL 值在数据库中的可能总归是好的，因为他们需要特别的关注当构建查询，限制的时候。一个对 NULL 替换的方案是有一个默认数据类型值，比如0对于数字类型的，空字符串对于文本类型。但是当你的数据库需要存储不完整的数据，那么 NULL 是必要的因为默认值会影响只会对空值的分析(已经被替换掉了或者比如需要算一个数字类型的平均值的时候)。有时候我们也无法避免 NULL 值，就像我们在之前外连接的时候看到的，当两个表有不对称的数据的时候。在这些情况下，我们可以为一列测试 NULL 值在 WHERE 子句中通过使用 IS NULL 或者 IS NOT NULL 限制。
+12345SEL...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/28</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/wangmian/2020/07/28/SQL6/" >
             
                 <span>SQL6:外连接（OUTER JOIN）</span>
@@ -736,9 +797,33 @@ col_...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 7
+        Total : 9
         </div>
         <!-- search  -->
         
@@ -751,6 +836,16 @@ col_...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/SQL8/" >SQL8：在查询中加入表达式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/SQL7/" >SQL7：关于NULLs</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -792,11 +887,11 @@ col_...
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="SQL"><span class="iconfont-archer">&#xe606;</span>SQL</span>
-    
         <span class="sidebar-tag-name" data-tags="AI"><span class="iconfont-archer">&#xe606;</span>AI</span>
     
         <span class="sidebar-tag-name" data-tags="Mente Carlo Tree Search"><span class="iconfont-archer">&#xe606;</span>Mente Carlo Tree Search</span>
+    
+        <span class="sidebar-tag-name" data-tags="SQL"><span class="iconfont-archer">&#xe606;</span>SQL</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
