@@ -367,6 +367,38 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/wangmian/2020/07/29/SQL10/" >
+            
+                <span>SQL10：对行数据的增删改查</span>
+        </a>
+        <div class="abstract-content">
+            之前讲的都是如歌在数据库中查找，从现在要开始学习如何对数据进行操作了。
+Schema 是什么我们之前说的数据库表格是一个二位的行列集合，行对应数据实体，列对应属性。在SQL中，数据库 Schema 描述的是每个表的结构以及表中的每列数据可以存储的类型。比如电影表中，Year必须是整数而Title必须是字符串。这种固定的结构才让查询变得高效。
+插入数据我们必须用 INSERT 来声明插入哪一个表以及我们插入的是一行还是多行。一般情况下，每一行你插入的数据需要包含每一个对应的列值，你可以一次插入多行数据只需要把他们按顺序写。
+1234INSERT INTO mytableVALUES (va...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/wangmian/2020/07/29/SQL9/" >
             
                 <span>SQL9：在SQL中使用聚合</span>
@@ -671,38 +703,11 @@ col_...
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/wangmian/2020/07/27/sql-1/" >
-            
-                <span>SQL1-SELECT查询</span>
-        </a>
-        <div class="abstract-content">
-            在关系型数据库中，数据都是存在表格（table)中，表格的每一行代表一条记录（record),而每一列(column)为记录的单个属性（property)。为了从数据库取到我们想要的内容，我们需要写SELECT查询语句（query)。查询语句声明了我们想要什么数据，在哪里找以及在返回之前需要作何处理。最基本的查询就是选择一个数据库表中的一到多列数据，查询的结果返回选择列的所有行记录，其中的每一行数据也可以成为一个实例（instance)。
-12SELECT column, another_column, …FROM mytable;
-如果我们想要查询这个表中的所有的列，我们可以使用 * ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/wangmian/page/2/">2</a><a class="extend next" rel="next" href="/wangmian/page/2/">NEXT &gt;</a>
+    </nav>
     
 </main>
             <!-- profile -->
@@ -994,9 +999,24 @@ col_...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 10
+        Total : 11
         </div>
         <!-- search  -->
         
@@ -1012,12 +1032,12 @@ col_...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/29</span><a class="archive-post-title" href= "/wangmian/2020/07/29/SQL9/" >SQL9：在SQL中使用聚合</a>
+            <span class="archive-post-date">07/29</span><a class="archive-post-title" href= "/wangmian/2020/07/29/SQL10/" >SQL10：对行数据的增删改查</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/SQL8/" >SQL8：在查询中加入表达式</a>
+            <span class="archive-post-date">07/29</span><a class="archive-post-title" href= "/wangmian/2020/07/29/SQL9/" >SQL9：在SQL中使用聚合</a>
         </li>
     
     
@@ -1027,12 +1047,17 @@ col_...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/sql-5/" >SQL5：使用JOIN进行多表查询</a>
+            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/SQL8/" >SQL8：在查询中加入表达式</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/SQL6/" >SQL6:外连接（OUTER JOIN）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/sql-5/" >SQL5：使用JOIN进行多表查询</a>
         </li>
     
     
