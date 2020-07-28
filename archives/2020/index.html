@@ -354,9 +354,40 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/wangmian/2020/07/29/SQL11/" >
+            
+                <span>SQL11：对表的增删改</span>
+        </a>
+        <div class="abstract-content">
+            创建表格你可以使用 CREATE TABLE 来创建新的数据库表格
+12345CREATE TABLE IF NOT EXISTS mytable (    column DataType TableConstraint DEFAULT default_value,    another_column DataType TableConstraint DEFAULT default_value,    …);
+每一行开始先是列名，然后是数据类型，表格的限制，最后是默认值。如果已经存在了相同表名的表，那么SQL通常会抛出一个异常，所以为了避免这个我们最好使用 IF NOT EXIST 子句...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/wangmian/2020/07/29/SQL10/" >
             
-                <span>SQL10：对行数据的增删改查</span>
+                <span>SQL10：对行数据的增删改</span>
         </a>
         <div class="abstract-content">
             之前讲的都是如歌在数据库中查找，从现在要开始学习如何对数据进行操作了。
@@ -659,37 +690,6 @@ col_...
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/wangmian/2020/07/27/sql-2/" >
-            
-                <span>SQL2-在查询中加入约束条件（Constraints)</span>
-        </a>
-        <div class="abstract-content">
-            现在我们已经可以从一个表中取出特定列的数据了，但是如果一个表有几百万条数据，那么取出全部的数据将是非常效率低甚至不可能。为了过滤出特点需要返回的数据，我们需要在查询中使用 WHERE 分句，它会应用于每一行通过检查特定列的值来决定是否将此行作为结果返回。
-12345SELECT column, another_column, …FROM mytable;WHERE condition    AND/OR another_condition    AND/OR …;
-可以使用 AND 或者 OR 来组合子句（例如 id &gt; 2 AND num &lt; 5)。下表列出了一些有用的运算...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
@@ -912,9 +912,32 @@ col_...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 11
+        Total : 12
         </div>
         <!-- search  -->
         
@@ -930,7 +953,12 @@ col_...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/29</span><a class="archive-post-title" href= "/wangmian/2020/07/29/SQL10/" >SQL10：对行数据的增删改查</a>
+            <span class="archive-post-date">07/29</span><a class="archive-post-title" href= "/wangmian/2020/07/29/SQL10/" >SQL10：对行数据的增删改</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/29</span><a class="archive-post-title" href= "/wangmian/2020/07/29/SQL11/" >SQL11：对表的增删改</a>
         </li>
     
     
@@ -940,22 +968,22 @@ col_...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/SQL7/" >SQL7：关于NULLs</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/SQL8/" >SQL8：在查询中加入表达式</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/SQL6/" >SQL6:外连接（OUTER JOIN）</a>
+            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/SQL7/" >SQL7：关于NULLs</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/sql-5/" >SQL5：使用JOIN进行多表查询</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/wangmian/2020/07/28/SQL6/" >SQL6:外连接（OUTER JOIN）</a>
         </li>
     
     
