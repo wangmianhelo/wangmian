@@ -367,6 +367,38 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/wangmian/2020/07/27/sql-4/" >
+            
+                <span>SQL4-过滤和排序查询结果</span>
+        </a>
+        <div class="abstract-content">
+            尽管在数据库中的每一条数据是唯一的，但是对于查询结果来说可能不是，比如不同的电影可能在相同的年份上映。在这种情况下，SQL提供了一种去掉那些有重复列值的行通过 DISTINCT 关键字。
+123SELECT DISTINCT column, another_column, …FROM mytableWHERE condition(s);
+因为 DISTINCT 关键字会盲目地去掉一些重复的行，我们将在之后知道如何基于特定的行来聚集（Grouping）使用 GROUP BY 子句。
+排序结果在现实场景中大量的数据在添加进数据库的时候是无序的，为了更好的阅读和理解查询结果，我们需要对查询得到...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/27</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SQL">SQL</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/wangmian/2020/07/27/sql-3/" >
             
                 <span>SQL3-在查询中加入约束条件-part2（Constraints)</span>
@@ -819,9 +851,20 @@ col_...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 13
+        Total : 14
         </div>
         <!-- search  -->
         
@@ -834,6 +877,11 @@ col_...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/05</span><a class="archive-post-title" href= "/wangmian/2020/10/05/TypeScript2/" >TypeScript:进阶语法</a>
+        </li>
     
     
         <li class="archive-post-item">
